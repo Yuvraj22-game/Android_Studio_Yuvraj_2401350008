@@ -98,5 +98,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        findViewById(R.id.btn_open_fragment_demo).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, FragmentDemoActivity.class);
+            startActivity(intent);
+        });
+
     }
 }
