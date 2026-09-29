@@ -5,142 +5,373 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pink_light_bg"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:clipToPadding="false"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="24dp">
+            android:orientation="vertical">
 
+            <!-- Header Banner Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Android Demos &amp; Examples"
+                        android:textColor="#EB0F4B"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Select a module below to explore Android components and features."
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Category 1: Layouts & Architecture -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:text="This is the main page "
-                android:textSize="24sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="10dp"
+                android:text="Layouts &amp; Architecture"
+                android:textColor="@color/pink_fragment1_text"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btn_open_calculator"
-                android:layout_width="200dp"
+            <GridLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Calculator" />
+                android:layout_marginBottom="20dp"
+                android:alignmentMode="alignBounds"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
 
-            <Button
-                android:id="@+id/btn_open_second_activity"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Second Activity" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Linear Layout"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#009688"
+                    app:cornerRadius="12dp" />
 
-            <Button
-                android:id="@+id/btn_open_checkbox"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Checkbox" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_constraint_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Constraint Layout"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#009688"
+                    app:cornerRadius="12dp" />
 
-            <Button
-                android:id="@+id/btn_open_listview"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="ListView"
-                android:layout_marginBottom="16dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_frame_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Frame Layout"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#009688"
+                    app:cornerRadius="12dp" />
 
-            <Button
-                android:id="@+id/btn_open_login_page"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="login page"
-                android:layout_marginBottom="16dp"
-                />
-            <Button
-                android:id="@+id/btn_open_select_color"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="Select Color"
-                android:layout_marginBottom="16dp"
-                />
-            <Button
-                android:id="@+id/btn_open_hello_page"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="hello page"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_grid_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Grid Layout"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#009688"
+                    app:cornerRadius="12dp" />
 
-            <Button
-                android:id="@+id/btn_open_google"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="google" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_fragment_demo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Fragments Demo"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#009688"
+                    app:cornerRadius="12dp" />
 
-            <Button
-                android:id="@+id/btn_open_caller"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Caller" />
+            </GridLayout>
 
-            <Button
-                android:id="@+id/btn_open_location"
-                android:layout_width="200dp"
+            <!-- Category 2: UI Widgets & Components -->
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Location" />
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="10dp"
+                android:text="UI Widgets &amp; Design"
+                android:textColor="@color/pink_fragment1_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btn_open_file_manager"
-                android:layout_width="200dp"
+            <GridLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="File Manager" />
+                android:layout_marginBottom="20dp"
+                android:alignmentMode="alignBounds"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
 
-            <Button
-                android:id="@+id/btn_open_grid_layout"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Grid Layout" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Checkbox"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="@color/pink_button_primary"
+                    app:cornerRadius="12dp" />
 
-            <Button
-                android:id="@+id/btn_open_frame_layout"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Frame Layout" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_listview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="ListView"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="@color/pink_button_primary"
+                    app:cornerRadius="12dp" />
 
-            <Button
-                android:id="@+id/btn_open_constraint_layout"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Constraint Layout" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_progress_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Progress Bar"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="@color/pink_button_primary"
+                    app:cornerRadius="12dp" />
 
-            <Button
-                android:id="@+id/btn_open_linear_layout"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Linear Layout" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_cardview_demo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="CardView Demo"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="@color/pink_button_primary"
+                    app:cornerRadius="12dp" />
 
-            <Button
-                android:id="@+id/btn_open_fragment_demo"
-                android:layout_width="200dp"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_fab_demo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/fab_demo"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="@color/pink_button_primary"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_themes_demo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Themes &amp; Material"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="@color/pink_button_primary"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_adapter_demo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/adapter_demo"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="@color/pink_button_primary"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_viewpager_demo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="ViewPager2 Demo"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="@color/pink_button_primary"
+                    app:cornerRadius="12dp" />
+
+            </GridLayout>
+
+            <!-- Category 3: App Features & Pages -->
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Fragments Demo" />
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="10dp"
+                android:text="App Pages &amp; Features"
+                android:textColor="@color/pink_fragment1_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:alignmentMode="alignBounds"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_calculator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Calculator"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#4CAF50"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_login_page"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Login Page"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#4CAF50"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_select_color"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Select Color"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#4CAF50"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_hello_page"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Hello Page"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#4CAF50"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_second_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Second Activity"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#4CAF50"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_localization_demo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/localization_demo"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#4CAF50"
+                    app:cornerRadius="12dp" />
+
+            </GridLayout>
+
+            <!-- Category 4: System & Utilities -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="10dp"
+                android:text="System &amp; Utilities"
+                android:textColor="@color/pink_fragment1_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:alignmentMode="alignBounds"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_google"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Google"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#3F51B5"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_caller"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Caller"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#3F51B5"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Location"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#3F51B5"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_file_manager"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="File Manager"
+                    android:textColor="@color/pink_button_text"
+                    app:backgroundTint="#3F51B5"
+                    app:cornerRadius="12dp" />
+
+            </GridLayout>
 
         </LinearLayout>
     </ScrollView>

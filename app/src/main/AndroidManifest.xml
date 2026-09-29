@@ -36,6 +36,15 @@
         <activity android:name=".ConstraintLayout"/>
         <activity android:name=".LinearLayout"/>
         <activity android:name=".FragmentDemoActivity"/>
+        <activity android:name=".ProgressBarActivity"/>
+        <activity
+            android:name=".ThemeExampleActivity"
+            android:theme="@style/Theme.ThemeExample" />
+        <activity android:name=".CardViewActivity"/>
+        <activity android:name=".LocalizationActivity"/>
+        <activity android:name=".FabExampleActivity"/>
+        <activity android:name=".AdapterDemoActivity"/>
+        <activity android:name=".ViewPagerDemoActivity"/>
 
     </application>
 

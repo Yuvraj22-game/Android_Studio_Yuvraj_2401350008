@@ -103,5 +103,30 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        findViewById(R.id.btn_open_progress_bar).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ProgressBarActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btn_open_themes_demo).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ThemeExampleActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btn_open_cardview_demo).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CardViewActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btn_open_localization_demo).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LocalizationActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btn_open_fab_demo).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, FabExampleActivity.class);
+            startActivity(intent);
+        });
+
     }
 }
